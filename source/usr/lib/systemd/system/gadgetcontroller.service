@@ -1,0 +1,11 @@
+[Unit]
+Description=D-Bus Controller for USB Gadgets in Linux
+
+[Service]
+Environment=PYTHONUNBUFFERED=true
+Type=dbus
+BusName=de.beaerlin.GadgetController
+ExecStart=/usr/bin/gadgetcontroller-service.py
+
+[Install]
+WantedBy=default.target

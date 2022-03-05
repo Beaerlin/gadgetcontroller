@@ -1,0 +1,56 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Your Name <youremail@domain.com>
+pkgname=gadgetcontroller
+pkgver=0.0.7
+pkgrel=3
+epoch=
+pkgdesc="gk"
+arch=(aarch64)
+url="https://update.beaerlin.de/packages/GadgetController.zip"
+license=('GPL')
+groups=()
+depends=(dhcp python-pydbus)
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=(gadgetcontroller)
+conflicts=(gadgetcontroller)
+replaces=()
+backup=()
+options=()
+install="gadgetcontroller.install"
+
+# source=(manual://apps)
+
+#"gadgetcontroller::https://update.beaerlin.de/packages/GadgetController.zip")
+noextract=()
+# md5sums=(SKIP)
+validpgpkeys=()
+
+prepare() {
+
+	cd ./
+}
+
+build() {
+	cd ./
+}
+
+check() {
+	cd ./
+}
+
+package() {
+    install -Dm755 /usr/share/applications/gadgetcontroller.desktop "$pkgdir/usr/share/applications/gadgetcontroller.desktop"
+    install -Dm755 /usr/bin/gadgetcontroller.py "$pkgdir/usr/bin/gadgetcontroller.py"
+
+    install -Dm755 /usr/lib/systemd/system/gadgetcontroller.service "$pkgdir/usr/lib/systemd/system/gadgetcontroller.service"
+    install -Dm755 /etc/dbus-1/system.d/de.beaerlin.GadgetController.conf "$pkgdir/etc/dbus-1/system.d/de.beaerlin.GadgetController.conf"
+    install -Dm755 /usr/bin/gadgetcontroller-service.py "$pkgdir/usr/bin/gadgetcontroller-service.py"
+    install -Dm777 /opt/gadgetcontroller/PKGBUILD "$pkgdir/opt/gadgetcontroller/PKGBUILD"
+    install -Dm755 /opt/gadgetcontroller/gadgetcontroller.install "$pkgdir/opt/gadgetcontroller/gadgetcontroller.install"
+}
