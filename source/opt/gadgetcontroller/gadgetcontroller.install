@@ -60,7 +60,7 @@ pre_remove() {
 }
 
 post_remove() {
-    echo ""
+    echo " "
     echo "Disable GadgetController Service"
     /usr/bin/systemctl disable gadgetcontroller
     echo "Done"

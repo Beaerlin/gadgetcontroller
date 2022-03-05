@@ -4,9 +4,9 @@ import os
 import subprocess
 import tempfile
 import time
+from functools import partial
 import xml.etree.ElementTree as ET
 from pydbus import SystemBus
-from functools import partial
 
 import gi
 

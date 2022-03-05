@@ -3,11 +3,12 @@
 import os
 import sys
 import time
+import tempfile
 import threading
 import xml.etree.ElementTree as ET
 from gi.repository import GLib
 from pydbus import SystemBus
-import tempfile
+
 
 BUS_NAME = "de.beaerlin.GadgetController"
 GADGETFS = "/sys/kernel/config/usb_gadget/"
