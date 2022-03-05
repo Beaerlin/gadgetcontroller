@@ -1,0 +1,49 @@
+# Maintainer: github@beaerlin.de
+pkgname=gadgetcontroller-git
+pkgver=0.0.1
+pkgrel=1
+epoch=
+pkgdesc="gk"
+arch=('i686' 'x86_64' 'arm' 'armv7h' 'armv6h' 'aarch64')
+url="https://github.com/Beaerlin/gadgetcontroller"
+license=('LGPL3')
+groups=()
+depends=(dhcp python-pydbus)
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=(gadgetcontroller)
+conflicts=(gadgetcontroller)
+replaces=()
+backup=()
+options=()
+
+source=("gadgetcontroller::git+git://github.com/Beaerlin/gadgetcontroller.git")
+
+noextract=()
+md5sums=(SKIP)
+validpgpkeys=()
+
+install="gadgetcontroller.install"
+
+prepare() {
+    cd ./
+}
+
+build() {
+    cd ./
+}
+
+check() {
+    cd ./
+}
+
+package() {
+    install -Dm755 "${srcdir}/${pkgname}/src/usr/share/applications/gadgetcontroller.desktop" "$pkgdir/usr/share/applications/gadgetcontroller.desktop"
+    install -Dm755 "${srcdir}/${pkgname}/src/usr/bin/gadgetcontroller.py" "$pkgdir/usr/bin/gadgetcontroller.py"
+    install -Dm755 "${srcdir}/${pkgname}/src/usr/lib/systemd/system/gadgetcontroller.service" "$pkgdir/usr/lib/systemd/system/gadgetcontroller.service"
+    install -Dm755 "${srcdir}/${pkgname}/src/etc/dbus-1/system.d/de.beaerlin.GadgetController.conf" "$pkgdir/etc/dbus-1/system.d/de.beaerlin.GadgetController.conf"
+    install -Dm755 "${srcdir}/${pkgname}/src/usr/bin/gadgetcontroller-service.py" "$pkgdir/usr/bin/gadgetcontroller-service.py"
+    install -Dm777 "${srcdir}/../PKGBUILD" "$pkgdir/opt/gadgetcontroller/PKGBUILD"
+    install -Dm755 "${srcdir}/../gadgetcontroller.install" "$pkgdir/opt/gadgetcontroller/gadgetcontroller.install"
+}
