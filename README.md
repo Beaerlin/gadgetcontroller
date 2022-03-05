@@ -3,7 +3,7 @@
 A D-Bus service for creating USB widgets in ConfigFS.
 
 This project consists of 2 parts:
-1. The GadgetController-service
+1. The GadgetController-Service:
 It takes an xml via D-Bus and creates USB gadgets accortdingly
 
 2. The GadgetController UI:
