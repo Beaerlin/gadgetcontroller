@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+StartupNotify=true
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=/usr/share/icons/Adwaita/512x512/devices/media-removable.png
+Name=Gadget Controller
+Exec=/usr/bin/gadgetcontroller.py
+
+Categories=Utility;
