@@ -34,3 +34,19 @@ Also you can send the output of your pinephone to the PC as usb Microphone.
 ***Here some pictures:***
 
 ![alt text](https://github.com/Beaerlin/gadgetcontroller/blob/main/pictures/start.jpg?raw=true)
+
+***Flash Drive Images:***
+
+![alt text](https://github.com/Beaerlin/gadgetcontroller/blob/main/pictures/flash.jpg?raw=true)
+
+***ISO Drive:***
+
+![alt text](https://github.com/Beaerlin/gadgetcontroller/blob/main/pictures/iso.jpg?raw=true)
+
+***HID Devices:***
+
+![alt text](https://github.com/Beaerlin/gadgetcontroller/blob/main/pictures/hid.jpg?raw=true)
+
+***Network:***
+
+![alt text](https://github.com/Beaerlin/gadgetcontroller/blob/main/pictures/net.jpg?raw=true)
